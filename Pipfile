@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 django = "*"
 neovim = "*"
+bs4 = "*"
+requests = "*"
 
 [dev-packages]
 

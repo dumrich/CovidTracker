@@ -1,3 +1,23 @@
 {% extends "base.html" %}
 
-<h1 class="container p-1"> Hell world </h1>
+{% block title %} COVID Data {% endblock %}
+
+{% block content %}
+<div class="row mx-3">
+	<div class="card border-primary mx-3" style="max-width: 20rem;">
+		<div class="card-header">Fact 1</div>
+		<div class="card-body">
+			<h4 class="card-title">When is it back to normal?</h4>
+			<p class="card-text">1/3 of adults return to normal within 2-3 weeks of testing positive</p>
+		</div>
+	</div>
+
+	<div class="card border-primary mx-3" style="max-width: 20rem;">
+		<div class="card-header">Fact 2</div>
+		<div class="card-body">
+			<h4 class="card-title">When is it back to normal for young adults?</h4>
+			<p class="card-text">1/5 of young adults return to normal within 2-3 weeks of testing positive</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
