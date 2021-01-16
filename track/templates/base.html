@@ -34,8 +34,9 @@
         <a class="nav-link" href="#">About</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Find Country Data">
+    <form method="post" class="form-inline my-2 my-lg-0">
+      <input id="country" class="form-control mr-sm-2" name="country" type="text" placeholder="Find Country Data">
+			{% csrf_token %}
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>

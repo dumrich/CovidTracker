@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %} COVID Data for {{ country }}{% endblock %}
+
+{% block content %}
+<div class="container">
+	<h2> Covid Data for country:<h2>
+	<table class="table table-hover pt-3">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">New Cases</th>
+      <th scope="col">Total Cases</th>
+      <th scope="col">New Deaths</th>
+			<th scope="col">Total Deaths</th>
+    </tr>
+  </thead>
+	<tbody>
+		{% for Date, NewCases, TotalCases, NewDeaths, TotalDeaths in Data %}
+				<tr class="table-active">
+					<th scope="row">{{ Date }}</th>
+					<td>{{ NewCases }}</td>
+					<td>{{ TotalCases }}</td>
+					<td>{{ NewDeaths }}</td>
+					<td>{{ TotalDeaths }}</td>
+				</tr>
+		{% endfor %}
+	</tbody>
+	</table>
+</div>
+{% endblock %}
