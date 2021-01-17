@@ -13,9 +13,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 </head>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Covid Tracker</a>
+  <a class="navbar-brand" href="/">Covid Tracker</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,7 +25,7 @@
   <div class="collapse navbar-collapse" id="navbarColor03">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home
+        <a class="nav-link" href="/">Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
@@ -42,10 +44,17 @@
   </div>
 </nav>
 <body>
-  <script src="js/scripts.js"></script>
-	<div id="content" class="p-3">
+	<div id="content" class="container p-3">
 		{% block content %}
 		{% endblock %}
+	<footer class="">
+		<br>
+		<hr>
+		<p>Citations:</p>
+		<p>
+			Max Roser, Hannah Ritchie, Esteban Ortiz-Ospina and Joe Hasell (2020) - "Coronavirus Pandemic (COVID-19)". Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/coronavirus' [Online Resource]
+		</p>
+	</footer>
 	</div>
 </body>
 </html>
