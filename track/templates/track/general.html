@@ -3,20 +3,23 @@
 {% block title %} COVID Data {% endblock %}
 
 {% block content %}
-<div class="row mx-3">
-	<div class="card border-primary mx-3" style="max-width: 20rem;">
-		<div class="card-header">Fact 1</div>
-		<div class="card-body">
-			<h4 class="card-title">When is it back to normal?</h4>
-			<p class="card-text">1/3 of adults return to normal within 2-3 weeks of testing positive</p>
+<div class="container">
+	<iframe src="https://ourworldindata.org/coronavirus-data-explorer?zoomToSelection=true&country=~OWID_WRL&region=World&casesMetric=true&interval=total&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" loading="lazy" style="width: 100%; height: 400px; border: 0px none;"></iframe>
+	<div class="row mx-3">
+		<div class="card border-primary mx-3" style="max-width: 20rem;">
+			<div class="card-header">Fact 1</div>
+			<div class="card-body">
+				<h4 class="card-title">When is it back to normal?</h4>
+				<p class="card-text">1/3 of adults return to normal within 2-3 weeks of testing positive</p>
+			</div>
 		</div>
-	</div>
 
-	<div class="card border-primary mx-3" style="max-width: 20rem;">
-		<div class="card-header">Fact 2</div>
-		<div class="card-body">
-			<h4 class="card-title">When is it back to normal for young adults?</h4>
-			<p class="card-text">1/5 of young adults return to normal within 2-3 weeks of testing positive</p>
+		<div class="card border-primary mx-3" style="max-width: 20rem;">
+			<div class="card-header">Fact 2</div>
+			<div class="card-body">
+				<h4 class="card-title">When is it back to normal for young adults?</h4>
+				<p class="card-text">1/5 of young adults return to normal within 2-3 weeks of testing positive</p>
+			</div>
 		</div>
 	</div>
 </div>
