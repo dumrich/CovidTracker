@@ -28,7 +28,7 @@ def findCountryData(request, country, region):
         parallelData = zip(DataDict["Date"][::-1], DataDict["New Cases"][::-1], DataDict["Total Cases"][::-1], DataDict["New Deaths"][::-1], DataDict["Total Deaths"][::-1])
         ChartNewCases, ChartTotalCases  = DataDict["New Cases"][::-1][0], DataDict["Total Cases"][::-1][0]
         ChartNewDeaths, ChartTotalDeaths = DataDict["New Deaths"][::-1][0], DataDict["Total Deaths"][::-1][0]
-        ChartTotalPopulation, ChartTotalTests, ChartTotalVaccinations = DataDict["Total Population"], DataDict["Total Vaccinations"], list(filter(None, DataDict["Total Cases"]))[-1] 
+        ChartTotalPopulation, ChartTotalTests, ChartTotalVaccinations = DataDict["Total Population"], DataDict["Total Tests"], DataDict["Total Vaccinations"] 
     if request.method=="POST":
         query = request.POST["country"].replace(" ", "").lower()
         if type(Tracker.find_country(country=query))==str:

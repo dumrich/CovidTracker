@@ -34,7 +34,6 @@ class Tracker:
                     self.data[row[2]].setdefault("Total Deaths", [])
                     self.data[row[2]].setdefault("New Deaths", [])
                     self.data[row[2]].setdefault("Cases Per Million", [])
-                    self.data[row[2]].setdefault("Total Tests", [])
                     self.data[row[2]].setdefault("Total Vaccinations", [])
                     self.data[row[2]].setdefault("Date", [])
                     self.data[row[2]]["Total Population"] = row[40]
@@ -43,6 +42,7 @@ class Tracker:
                     temp=0
                 else:
                     self.data[row[2]]["Total Cases"].append(row[4])
+                self.data[row[2]]["Total Deaths"].append(row[7])
                 if row[7]=="":
                     temp=0
                 else:
@@ -50,10 +50,10 @@ class Tracker:
                 self.data[row[2]]["New Deaths"].append(row[8])
                 self.data[row[2]]["Cases Per Million"].append(row[10])
                 self.data[row[2]]["Date"].append(row[3])
-                if row[26]=="":
+                if row[25]=="":
                     temp=0
                 else:
-                    self.data[row[2]]["Total Tests"].append(row[26])
+                    self.data[row[2]]["Total Tests"] = row[25]
                 if row[34]=="":
                     temp = 0 
                 else:
