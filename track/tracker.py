@@ -3,12 +3,14 @@ import csv
 import time
 import os
 
+#test comment
+
 TRACK = ""
 
 if __name__=="__main__":
-    TRACK = os.path.abspath(os.getcwd())+'/data.csv'
+    TRACK = os.path.abspath(os.path.dirname(__file__))+'/data.csv'
 else:
-    TRACK=os.path.abspath(os.getcwd())+'/track/data.csv'
+    TRACK=os.path.abspath(os.path.dirname(__file__))+'/data.csv'
 
 class Tracker:
     """covid.ourworldindata.org web scraper to find COVID data"""
